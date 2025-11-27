@@ -34,7 +34,7 @@
             return <i dangerouslySetInnerHTML={{ __html: IconComponent.toSvg({ size, class: className }) }} />;
         };
 
-        // --- Constants & Helper Functions (Copied from React component) ---
+        // --- Constants & Helper Functions ---
 
         const UNITS = {
             yellow: { name: 'Yellow Diamond', width: 2, height: 1, color: '#fbbf24', shape: '1x2' },
@@ -650,6 +650,7 @@
         }
 
         const rootElement = document.getElementById('root');
+        // FIX: Use ReactDOM.createRoot for React 18 compatibility
         ReactDOM.createRoot(rootElement).render(<DiamondBattleshipSolver />);
     </script>
 </body>
